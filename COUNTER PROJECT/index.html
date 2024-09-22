@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="first">
+            <h1>counter</h1>
+        </div>
+
+        <div class="second">
+            <span id="change">0</span>
+        </div>
+
+        <div class="button1">
+            <button id="ad">ADD</button>
+             </div>
+             <div class="button2">
+                <button id="sub">SUBTRACT</button>
+                 </div>
+       
+    </div>
+</body>
+
+<script>
+    const change=document.querySelector('#change');
+    const up=document.querySelector('#ad');
+    const sub=document.querySelector('#sub');
+    let value=0;
+    function sam()
+    {
+        value=value-1;
+        if(value<0)
+        {
+            alert("subtraction is not possible")
+            value=0;
+        }
+        change.innerHTML=value;
+    }
+
+    function vam()
+    {
+        value=value+1;
+        change.innerHTML=value;
+    }
+    up.addEventListener('click',vam)
+    sub.addEventListener('click',sam)
+</script>
+</html>

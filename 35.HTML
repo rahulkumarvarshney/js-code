@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="36style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="first" id="change">
+            <h1 id="changes">magic our moment keyboard in system</h1>
+        </div>
+    </div>
+</body>
+<script>
+    
+    const dd=document.getElementById('changes');
+    window.addEventListener('keydown',(e)=>{
+        dd.innerHTML=`<div id="color">
+            <table>
+                <tr>
+                  <th>key</th>
+                  <th>keycode</th>
+                  <th>keycodevalue</th>
+                </tr>
+                <tr>
+                  <td>${e.key}</td>
+                  <td>${e.keyCode}</td>
+                  <td>${e.code}</td>
+                </tr>
+            </table>
+        </div>`;
+    })
+    
+</script>
+</html>
